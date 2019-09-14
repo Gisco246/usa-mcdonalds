@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>McDonalds Stores and obesity in the States</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,900i" rel="stylesheet">
+
+    <style>
+        /* UK Colors: 
+            #c7c9c8 light gray 
+            #63666a dark gray
+            #15397f dark blue
+            #009bda light blue
+            #0033a0 official blue
+        */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: #fffffa;
+            font-size: 1.1em;
+        }
+        section {
+            width: 80%;
+            margin: 10px auto;
+        }
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900i;
+            font-size: 2.8em;
+            font-style: italic;
+            color: #ffc107;
+            /* The em unit. 3x the current size */
+            letter-spacing: .01em;
+            margin: 0 0 15px 0;
+            /* text-transform: uppercase; */
+        }
+        h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: #ffc107;
+            font-size: 1.5em;
+            letter-spacing: .06em;
+            font-style: italic;
+            margin: 0 0 25px 0;
+        }
+        h3 {
+            color :#ffc107;
+        }
+        p {
+            font-size: 1.15em;
+            line-height: 1.8em;
+            margin: 0 0 25px 0;
+        }
+        a {
+            color: #6a96f0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding: 0px 20px 4px 20px;
+            /* font-size: 0.96em; */
+            line-height: 1.6em;
+            color: #d1d1d1;
+        }
+        li {
+            margin: 10px 0
+        }
+        #map {
+            width: 100%;
+            margin: 0px auto;
+        }
+        .max-image-width {
+            width: 100%;
+        }
+        /* add custom style class here */
+        .linkbox {
+            margin: 3px 0 20px 0;
+            display: block;
+            font-weight: 300;
+            color: #ffc107;
+        }
+        hr {
+            border: 0px;
+            border-bottom: 1px solid #ffc107;
+            padding-top: 20px;
+        }
+        /* Use float property to make two-column layout */
+        .first-column {
+            float: left;
+            width: 48%;
+            padding-right: 20px;
+        }
+        .column {
+            float: left;
+            width: 48%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .svg-title {
+            float: left;
+            display: inline-block;
+            width: 75px;
+            margin: -8px 0px -8px 0;
+        }
+        .uky-part{
+            background:#ffc107;
+        }
+        /* When browser is 800px wide or less */
+        @media screen and (max-width: 800px) {
+            .first-column,
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <iframe width="100%" height="670" frameborder="0" src="https://nmp.carto.com/u/gisco246/builder/561e4d7c-2f3d-4047-8f06-33ed7c31b47d/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <section>
+        <a href='https://nmp.carto.com/u/gisco246/builder/561e4d7c-2f3d-4047-8f06-33ed7c31b47d/embed' class="linkbox">Full-screen version</a>
+        <img src="images/Mcdonalds.svg" class="svg-title">
+        <h1>cDonalds Stores and obesity in the States</h1>
+        <h2>University of Kentucky Geography</h2>
+        <div class="row">
+            <div class="first-column">
+                <p>
+                    This map shows the obesity percentages and the amount of McDonalds stores in the United States.<br>
+                    The Main Question of the map is: Does the McDonalds make people obese? 
+                    Draw your own conclusions with the map (please do not sue me Mcdonalds, i still <3 you).<br> 
+                    On loading you can notice the obesity percentages by state. Zoom in once and you can see the amount of Mcdonalds per 100000 km hexagons. Zoom into a state and you can see the actuall stores. 
+                    Hover on a store for store info, or click a state to see obesity percentages and amout of stores per state
+                </p>
+                <h3>Tools used in this project</h3>
+                <ul>
+                    <li>notepad++ (prepare the mcd stores data)</li>
+                    <li>Qgis 3.8 on a windows 10 machine</li>
+                    <li>Postgis to create the 100000 meters hexagons and analisys</li>
+                    <li>Visual Studio Code</li>
+                </ul>
+
+
+                <hr>
+                <h3>Project assets</h3>
+                <ul>
+                        <li><a href="geojsons/National_Obesity_By_State.geojson" download>Percentages obesity GeoJSON</a>
+                        <li><a href="geojsons/mcdonalds_usa.geojson" download>Point location McDonalds stores GeoJSON</a>
+                    <!-- <li><a href="arches_us.geojson" download>point locations GeoJSON</a></li>-->
+                            <li>Sources:<ul>
+                                <li><a href="http://www.poi-factory.com/node/11154">Poi Factory, GPS and other interesting topics </a></li>
+                                <li><a href="https://catalog.data.gov/dataset/national-obesity-by-state-b181b">The home of the U.S. Government’s open data</a></li>
+                            </ul></li>
+                </ul>
+                </p>
+
+
+            </div>
+            <div class="column">
+                <img class="max-image-width" src="images/french-fries.jpg"
+                    title="UKy Campus">
+                <div class="linkbox">Image by Pexels from Pixabay</div>
+
+            </div>
+        </div>
+
+
+        <hr>
+        <h3>Author</h3>
+        <ul>
+			<li>See my projects on GitHub: <a href="https://github.com/Gisco246">Gisco246</a></li>
+			<li>Follow me on twitter: <a href="https://twitter.com/g_gomperts">@g_gomperts</a></li>
+			<li>Visit my  <a href='https://www.facebook.com/Gomperts'>Facebook</a></li>
+        </ul>
+        <hr>
+        <!-- <h4><a href="https://uky-gis.github.io">UKy GIS and Mapping</a></h4> -->
+        <div class="uky-part">
+        <a href="https://uky-gis.github.io">
+            <img src="https://uky-gis.github.io/graphics/logo-color-400px.png"
+                alt="University of Kentucky Geography"></a>
+        <a href="https://newmapsplus.as.uky.edu">
+            <img src="https://newmapsplus.as.uky.edu/sites/default/files/NMP%20Logo.png" alt="New Maps Plus"></a></div>
+    </section>
+</body>
+
+</html>
